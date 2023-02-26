@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto-Regular", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-color: rgb(71, 71, 71);
+}
+body header {
+  width: 1000px;
+  height: 200px;
+  margin: 0 auto;
+}
+body header nav {
+  display: inline-block;
+  width: 100px;
+}
+body header h1 {
+  display: inline-block;
+  height: inherit;
+  padding: 50px;
+}
+body #projects {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+}
+body #projects figure {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: black solid 5px;
+  border-radius: 20px;
+  margin: 50px;
+  padding: 10px;
+}
+body #bio {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+}
+body #tech {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+}
+body #tech figure {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: black solid 5px;
+  border-radius: 20px;
+  margin: 50px;
+  padding: 10px;
+}
+body footer {
+  color: rgb(186, 186, 186);
+  text-align: center;
+  width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */

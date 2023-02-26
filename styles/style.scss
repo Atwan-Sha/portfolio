@@ -1,0 +1,74 @@
+$bgColor: rgb(71, 71, 71);
+$txtColor: white;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto-Regular", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $txtColor;
+  background-color: $bgColor;
+
+  header {
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto;
+    nav {
+        display: inline-block;
+        width: 100px;
+    }
+    h1 {
+        display: inline-block; 
+        height: inherit;
+        padding: 50px;
+    }
+  }
+
+  #projects {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    figure {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      border: black solid 5px;
+      border-radius: 20px;
+      margin: 50px;
+      padding: 10px;
+    }
+  }
+
+  #bio {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  #tech {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    figure {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: black solid 5px;
+      border-radius: 20px;
+      margin: 50px;
+      padding: 10px;
+    }
+  }
+
+  footer {
+    color: rgb(186, 186, 186);
+    text-align: center;
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+  }
+}
