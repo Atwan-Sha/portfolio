@@ -18,19 +18,41 @@ body {
     height: 200px;
     margin: 0 auto;
     nav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
         display: inline-block;
-        width: 100px;
+        margin: 50px;
+        a {
+          color: $txtColor;
+          text-decoration: none;
+          font-size: 30px;
+        }
+        a:hover {
+          color: rgb(170, 117, 255);
+        }
+        ul {
+          list-style: none;
+          display: none;
+          // display: inline;
+          li {
+            display: inline;
+            margin-left: 10px;
+          }
+        }
     }
     h1 {
         display: inline-block; 
-        height: inherit;
-        padding: 50px;
+        vertical-align: top;
+        font-size: 30px;
+        margin: 50px 0 50px 0;
     }
   }
 
   #projects {
+    border: solid 1px rgb(124, 124, 124);
     width: 1000px;
-    height: 400px;
+    height: 800px;
     margin: 0 auto;
     figure {
       display: inline-block;
@@ -43,15 +65,17 @@ body {
     }
   }
 
-  #bio {
+  #about {
+    border: solid 1px rgb(124, 124, 124);
     width: 1000px;
-    height: 400px;
+    height: 800px;
     margin: 0 auto;
   }
 
   #tech {
+    border: solid 1px rgb(124, 124, 124);
     width: 1000px;
-    height: 400px;
+    height: 800px;
     margin: 0 auto;
     figure {
       display: inline-block;

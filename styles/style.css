@@ -16,17 +16,38 @@ body header {
   margin: 0 auto;
 }
 body header nav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
   display: inline-block;
-  width: 100px;
+  margin: 50px;
+}
+body header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+body header nav a:hover {
+  color: rgb(170, 117, 255);
+}
+body header nav ul {
+  list-style: none;
+  display: none;
+}
+body header nav ul li {
+  display: inline;
+  margin-left: 10px;
 }
 body header h1 {
   display: inline-block;
-  height: inherit;
-  padding: 50px;
+  vertical-align: top;
+  font-size: 30px;
+  margin: 50px 0 50px 0;
 }
 body #projects {
+  border: solid 1px rgb(124, 124, 124);
   width: 1000px;
-  height: 400px;
+  height: 800px;
   margin: 0 auto;
 }
 body #projects figure {
@@ -38,14 +59,16 @@ body #projects figure {
   margin: 50px;
   padding: 10px;
 }
-body #bio {
+body #about {
+  border: solid 1px rgb(124, 124, 124);
   width: 1000px;
-  height: 400px;
+  height: 800px;
   margin: 0 auto;
 }
 body #tech {
+  border: solid 1px rgb(124, 124, 124);
   width: 1000px;
-  height: 400px;
+  height: 800px;
   margin: 0 auto;
 }
 body #tech figure {
