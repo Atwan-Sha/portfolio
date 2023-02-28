@@ -14,7 +14,8 @@ body {
   background-color: $bgColor;
 
   header {
-    width: 1000px;
+    border: solid 1px rgb(124, 124, 124);
+    width: 1300px;
     height: 200px;
     margin: 0 auto;
     nav {
@@ -51,17 +52,36 @@ body {
 
   #projects {
     border: solid 1px rgb(124, 124, 124);
-    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1300px;
     height: 800px;
     margin: 0 auto;
     figure {
-      display: inline-block;
-      width: 200px;
-      height: 200px;
-      border: black solid 5px;
-      border-radius: 20px;
-      margin: 50px;
+      // display: inline-block;
+      // border: white solid 1px;
+      width: 280px;
+      height: 280px;
+      margin: 0;
       padding: 10px;
+      img {
+        width: 250px;
+        height: 250px;
+        // border: black solid 5px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      figcaption {
+        text-align: center;
+        font-size: 30px;
+        padding: 10px;
+      }
+    }
+    figure:hover {
+      img {
+        width: 260px;
+        height: 260px;
+      }
     }
   }
 

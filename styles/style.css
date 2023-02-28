@@ -11,7 +11,8 @@ body {
   background-color: rgb(71, 71, 71);
 }
 body header {
-  width: 1000px;
+  border: solid 1px rgb(124, 124, 124);
+  width: 1300px;
   height: 200px;
   margin: 0 auto;
 }
@@ -46,18 +47,32 @@ body header h1 {
 }
 body #projects {
   border: solid 1px rgb(124, 124, 124);
-  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1300px;
   height: 800px;
   margin: 0 auto;
 }
 body #projects figure {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  border: black solid 5px;
-  border-radius: 20px;
-  margin: 50px;
+  width: 280px;
+  height: 280px;
+  margin: 0;
   padding: 10px;
+}
+body #projects figure img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+body #projects figure figcaption {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+}
+body #projects figure:hover img {
+  width: 260px;
+  height: 260px;
 }
 body #about {
   border: solid 1px rgb(124, 124, 124);
