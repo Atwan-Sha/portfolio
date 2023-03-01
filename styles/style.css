@@ -2,19 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: "Roboto Mono", monospace;
   scroll-behavior: smooth;
 }
 
 body {
-  color: white;
-  background-color: rgb(71, 71, 71);
+  color: rgb(204, 231, 239);
+  background-color: rgb(48, 48, 48);
 }
 body header {
   border: solid 1px rgb(124, 124, 124);
   width: 1300px;
   height: 200px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 body header nav {
   overflow: hidden;
@@ -24,7 +25,7 @@ body header nav {
   margin: 50px;
 }
 body header nav a {
-  color: white;
+  color: rgb(204, 231, 239);
   text-decoration: none;
   font-size: 30px;
 }
@@ -52,11 +53,17 @@ body #projects {
   max-width: 1300px;
   height: 800px;
   margin: 0 auto;
+  padding: 100px 50px;
 }
 body #projects figure {
   width: 280px;
-  height: 280px;
+  height: 500px;
   margin: 0;
+  padding: 10px;
+}
+body #projects figure h3 {
+  text-align: center;
+  font-size: 20px;
   padding: 10px;
 }
 body #projects figure img {
@@ -67,8 +74,15 @@ body #projects figure img {
 }
 body #projects figure figcaption {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   padding: 10px;
+}
+body #projects figure figcaption a {
+  color: rgb(204, 231, 239);
+  font-size: 20px;
+}
+body #projects figure figcaption a:hover {
+  color: white;
 }
 body #projects figure:hover img {
   width: 260px;
@@ -76,9 +90,12 @@ body #projects figure:hover img {
 }
 body #about {
   border: solid 1px rgb(124, 124, 124);
-  width: 1000px;
+  max-width: 1000px;
   height: 800px;
   margin: 0 auto;
+  padding: 100px 30px;
+  font-size: 30px;
+  line-height: 1.5em;
 }
 body #tech {
   border: solid 1px rgb(124, 124, 124);
