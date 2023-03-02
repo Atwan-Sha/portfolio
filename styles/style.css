@@ -11,7 +11,6 @@ body {
   background-color: rgb(48, 48, 48);
 }
 body header {
-  border: solid 1px rgb(124, 124, 124);
   width: 1300px;
   height: 200px;
   margin: 0 auto;
@@ -47,11 +46,12 @@ body header h1 {
   margin: 50px 0 50px 0;
 }
 body #projects {
-  border: solid 1px rgb(124, 124, 124);
+  max-width: 1300px;
+  max-height: 1300px;
   display: flex;
   justify-content: space-around;
-  max-width: 1300px;
-  height: 800px;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 100px 50px;
 }
@@ -89,28 +89,42 @@ body #projects figure:hover img {
   height: 260px;
 }
 body #about {
-  border: solid 1px rgb(124, 124, 124);
   max-width: 1000px;
   height: 800px;
   margin: 0 auto;
   padding: 100px 30px;
+}
+body #about h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+body #about p {
   font-size: 30px;
   line-height: 1.5em;
 }
 body #tech {
-  border: solid 1px rgb(124, 124, 124);
-  width: 1000px;
-  height: 800px;
+  max-width: 1300px;
+  height: 1000px;
   margin: 0 auto;
+  padding: 100px 50px;
+  font-size: 25px;
 }
-body #tech figure {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: black solid 5px;
-  border-radius: 20px;
-  margin: 50px;
-  padding: 10px;
+body #tech h2 {
+  font-size: 30px;
+  margin: 0 0 70px 50px;
+}
+body #tech .flex-container {
+  max-width: 1200px;
+  max-height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body #tech .flex-container figure {
+  text-align: center;
+  width: 200px;
+  height: 200px;
 }
 body footer {
   color: rgb(186, 186, 186);
