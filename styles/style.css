@@ -2,13 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto Mono", monospace;
   scroll-behavior: smooth;
 }
 
 body {
   color: rgb(204, 231, 239);
   background-color: rgb(48, 48, 48);
+  font-family: "Roboto Mono", monospace;
 }
 body header {
   width: 1300px;
@@ -47,10 +47,10 @@ body header h1 {
 }
 body #projects {
   max-width: 1300px;
-  max-height: 1300px;
+  min-height: 800px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 100px 50px;
@@ -90,7 +90,7 @@ body #projects figure:hover img {
 }
 body #about {
   max-width: 1000px;
-  height: 800px;
+  min-height: 800px;
   margin: 0 auto;
   padding: 100px 30px;
 }
@@ -117,14 +117,25 @@ body #tech .flex-container {
   max-width: 1200px;
   max-height: 500px;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   align-items: center;
   flex-wrap: wrap;
 }
 body #tech .flex-container figure {
   text-align: center;
-  width: 200px;
+  width: 150px;
   height: 200px;
+}
+body #tech .flex-container figure a {
+  text-decoration: none;
+  color: rgb(204, 231, 239);
+}
+body #tech .flex-container figure img {
+  width: 100px;
+  height: auto;
+}
+body #tech .flex-container figure:hover img {
+  background-color: rgb(64, 64, 64);
 }
 body footer {
   color: rgb(186, 186, 186);

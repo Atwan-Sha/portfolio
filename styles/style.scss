@@ -7,13 +7,13 @@ $fontAlt: 'Roboto Mono', monospace;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: $fontAlt;
   scroll-behavior: smooth;
 }
 
 body {
   color: $txtColor;
   background-color: $bgColor;
+  font-family: $fontAlt;
 
   header {
     // border: solid 1px rgb(124, 124, 124);
@@ -56,10 +56,10 @@ body {
   #projects {
     // border: solid 1px rgb(124, 124, 124);
     max-width: 1300px;
-    max-height: 1300px;
+    min-height: 800px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
     flex-wrap: wrap;
 
     margin: 0 auto;
@@ -108,7 +108,7 @@ body {
   #about {
     // border: solid 1px rgb(124, 124, 124);
     max-width: 1000px;
-    height: 800px;
+    min-height: 800px;
     margin: 0 auto;
     padding: 100px 30px;
     h2 {
@@ -137,16 +137,26 @@ body {
       max-width: 1200px;
       max-height: 500px;
       display: flex;
-      justify-content: space-around;
+      justify-content: left;
       align-items: center;
       flex-wrap: wrap;
+
       figure {
         // border: white solid 1px;
-        // display: inline-block;
         text-align: center;
-        width: 200px;
+        width: 150px;
         height: 200px;
-
+        a {
+          text-decoration: none;
+          color: $txtColor;
+        }
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
+      figure:hover {
+        img {background-color: rgb(64, 64, 64);}
       }
     }
   }
