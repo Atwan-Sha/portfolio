@@ -10,6 +10,21 @@ $fontAlt: 'Roboto Mono', monospace;
   scroll-behavior: smooth;
 }
 
+.parallax {
+  // background-color: #373535;
+  .bg-text {
+    font-size: 25px;
+    opacity: 0.1;
+    position: fixed;
+    z-index:0;
+  }
+}
+main {
+    position: relative;
+    z-index:1;
+}
+
+
 body {
   color: $txtColor;
   background-color: $bgColor;
@@ -32,13 +47,12 @@ body {
           text-decoration: none;
           font-size: 30px;
         }
-        a:hover {
-          color: rgb(170, 117, 255);
-        }
-        ul {
+        a:hover {color: rgb(170, 117, 255);}
+        .expand {
           list-style: none;
           display: none;
           // display: inline;
+          // transition: 2s;
           li {
             display: inline;
             margin-left: 10px;
@@ -101,6 +115,7 @@ body {
       img {
         width: 260px;
         height: 260px;
+        transition: 1s;
       }
     }
   }
@@ -112,10 +127,12 @@ body {
     margin: 0 auto;
     padding: 100px 30px;
     h2 {
+      color: white;
       font-size: 30px;
       margin-bottom: 50px;
     }
     p {
+      color: white;
       font-size: 30px;
       line-height: 1.5em;
     }
@@ -156,7 +173,10 @@ body {
         }
       }
       figure:hover {
-        img {background-color: rgb(64, 64, 64);}
+        img {
+          background-color: rgb(64, 64, 64); 
+          transition: 500ms;
+        }
       }
     }
   }

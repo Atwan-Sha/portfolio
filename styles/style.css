@@ -5,6 +5,18 @@
   scroll-behavior: smooth;
 }
 
+.parallax .bg-text {
+  font-size: 25px;
+  opacity: 0.1;
+  position: fixed;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
 body {
   color: rgb(204, 231, 239);
   background-color: rgb(48, 48, 48);
@@ -31,11 +43,11 @@ body header nav a {
 body header nav a:hover {
   color: rgb(170, 117, 255);
 }
-body header nav ul {
+body header nav .expand {
   list-style: none;
   display: none;
 }
-body header nav ul li {
+body header nav .expand li {
   display: inline;
   margin-left: 10px;
 }
@@ -87,6 +99,7 @@ body #projects figure figcaption a:hover {
 body #projects figure:hover img {
   width: 260px;
   height: 260px;
+  transition: 1s;
 }
 body #about {
   max-width: 1000px;
@@ -95,10 +108,12 @@ body #about {
   padding: 100px 30px;
 }
 body #about h2 {
+  color: white;
   font-size: 30px;
   margin-bottom: 50px;
 }
 body #about p {
+  color: white;
   font-size: 30px;
   line-height: 1.5em;
 }
@@ -136,6 +151,7 @@ body #tech .flex-container figure img {
 }
 body #tech .flex-container figure:hover img {
   background-color: rgb(64, 64, 64);
+  transition: 500ms;
 }
 body footer {
   color: rgb(186, 186, 186);
