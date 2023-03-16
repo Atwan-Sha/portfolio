@@ -35,10 +35,17 @@ body header {
   padding: 0 50px;
 }
 body header nav {
+  width: auto;
+  height: 50px;
   overflow: hidden;
   background-color: #333;
   display: inline-block;
   margin: 50px;
+}
+body header nav .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 body header nav a {
   color: rgb(204, 231, 239);
@@ -74,7 +81,7 @@ body #projects {
 }
 body #projects figure {
   width: 280px;
-  height: 500px;
+  height: 600px;
   margin: 0;
   padding: 10px;
 }
@@ -92,7 +99,8 @@ body #projects figure .img-container {
 }
 body #projects figure img {
   object-fit: cover;
-  opacity: 0.7;
+  opacity: 0.8;
+  transition: 1s;
 }
 body #projects figure figcaption {
   text-align: center;
