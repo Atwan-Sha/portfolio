@@ -19,7 +19,7 @@
   transform: translateZ(-20px) scale(2);
 }
 .bg-wrapper fg-wrapper {
-  width: 80%;
+  width: 100%;
   height: 100%;
   overflow: scroll;
 }
@@ -32,36 +32,42 @@ body {
 body header {
   width: 1300px;
   height: 200px;
-  overflow: visible;
   margin: 0 auto;
+  padding: 0 50px;
 }
-body header h1 {
-  font-size: 30px;
-  text-align: right;
-}
-body nav {
-  position: sticky;
-  top: 45px;
-  left: 170px;
+body header nav {
+  width: auto;
+  height: 50px;
   overflow: hidden;
   background-color: #333;
   display: inline-block;
+  margin: 50px;
 }
-body nav a {
+body header nav .sticky {
+  position: sticky;
+  top: 0px;
+}
+body header nav a {
   color: rgb(204, 231, 239);
   text-decoration: none;
   font-size: 30px;
 }
-body nav a:hover {
+body header nav a:hover {
   color: rgb(170, 117, 255);
 }
-body nav .expand {
+body header nav .expand {
   list-style: none;
   display: none;
 }
-body nav .expand li {
+body header nav .expand li {
   display: inline;
   margin-left: 10px;
+}
+body header h1 {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 30px;
+  margin: 50px 0 50px 0;
 }
 body #projects {
   max-width: 1300px;
@@ -176,4 +182,4 @@ body footer {
   margin: 0 auto;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.cs.map */

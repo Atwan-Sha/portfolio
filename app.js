@@ -25,14 +25,14 @@ nav.addEventListener("mouseleave", () => {
 
 // * sticky nav
 bgWrapper.addEventListener("scroll", () => {
-    console.log('navOffset: ', nav.offsetTop);
-    console.log('offset: ', window.scrollY);
+    // console.log('navOffset: ', nav.offsetTop);
+    console.log('offset: ', fgWrapper.offsetTop);
 
     if (bgWrapper.pageYOffset >= nav.offsetTop) {
-        nav.classList.add("sticky");
+        // nav.classList.add("sticky");
         // console.log('add sticky');
     } else {
-        nav.classList.remove("sticky");
+        // nav.classList.remove("sticky");
         // console.log('remove sticky');
     }
 
