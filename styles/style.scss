@@ -10,6 +10,7 @@ $fontAlt: "Roboto Mono", monospace;
   scroll-behavior: smooth;
 }
 
+
 // * parallax scroll effect
 .bg-wrapper {
   // background-color: #373535;
@@ -25,13 +26,19 @@ $fontAlt: "Roboto Mono", monospace;
     z-index: -1;
     transform: translateZ(-20px) scale(2);
   }
-  fg-wrapper {
-    width: 80%;
-    height: 100%;
-    overflow: scroll;
+  .fg-wrapper {
+    // width: 80%;
+    // height: 100%;
+    // overflow: scroll;
     // position: absolute;
     // z-index: -1;
     // transform: translateZ(-5px) scale(1.5);
+
+    // display: grid;
+    // grid-template-columns: 5% 90% 5%;
+    // grid-template-columns: 20% 60% 20%;
+    // justify-items: center;
+
   }
 }
 
@@ -40,10 +47,12 @@ body {
   color: $txtColor;
   background-color: $bgColor;
   font-family: $fontAlt;
+  // main {display: grid;}
+
   header {
     // border: solid 1px rgb(124, 124, 124);
     width: 1300px;
-    height: 200px;
+    height: 100px;
     overflow: visible;
     margin: 0 auto;
     // padding: 0 50px;
@@ -53,14 +62,17 @@ body {
       // margin: 50px 0 50px 0;
     }
   }
+
   nav {
-    // width: auto;
-    // height: 50px;
+    // grid-column: 1/1;
+    width: auto;
+    height: 50px;
     position: sticky; top: 45px; 
-    left: 170px;
+    left: 100px;
     overflow: hidden;
     background-color: #333;
     display: inline-block;
+    // display: grid;
     a {
       color: $txtColor;
       text-decoration: none;
@@ -83,8 +95,9 @@ body {
     }
   }
 
-
   #projects {
+    // grid-column: 2/2;
+
     // border: solid 1px rgb(124, 124, 124);
     max-width: 1300px;
     min-height: 800px;
@@ -149,6 +162,8 @@ body {
   }
 
   #about {
+    // grid-column: 2/2;
+
     // border: solid 1px rgb(124, 124, 124);
     max-width: 1000px;
     min-height: 800px;
