@@ -13,30 +13,29 @@ let bgTextStr = '010010010010000001100001011011010010000001100001011011100010000
 bgTextStr = bgTextStr.repeat(15).split('').join(' ');
 bgText.insertAdjacentText('beforeEnd', bgTextStr);
 
-// * nav hb menu
-icon.addEventListener("mouseenter", () => {
-    menu.style.display = "inline";
-});
+// // * nav hb menu
+// icon.addEventListener("mouseenter", () => {
+//     menu.style.display = "inline";
+// });
 
-nav.addEventListener("mouseleave", () => {
-    menu.style.display = "none";
-});
+// nav.addEventListener("mouseleave", () => {
+//     menu.style.display = "none";
+// });
+
+// // * sticky nav
+// bgWrapper.addEventListener("scroll", () => {
+//     console.log('scrollTop: ', bgWrapper.scrollTop); 
+//     if (bgWrapper.pageYOffset >= nav.offsetTop) {
+//         // nav.classList.add("sticky");
+//         // console.log('add sticky');
+//     } else {
+//         // nav.classList.remove("sticky");
+//         // console.log('remove sticky');
+//     }
+// });
 
 
-// * sticky nav
-bgWrapper.addEventListener("scroll", () => {
-    // console.log('navOffset: ', nav.offsetTop);
-    console.log('offset: ', fgWrapper.offsetTop);
 
-    if (bgWrapper.pageYOffset >= nav.offsetTop) {
-        // nav.classList.add("sticky");
-        // console.log('add sticky');
-    } else {
-        // nav.classList.remove("sticky");
-        // console.log('remove sticky');
-    }
-
-});
 
 
 

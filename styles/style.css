@@ -18,13 +18,14 @@
   z-index: -1;
   transform: translateZ(-20px) scale(2);
 }
+
 body {
   color: rgb(204, 231, 239);
   background-color: rgb(28, 28, 28);
   font-family: "Roboto Mono", monospace;
 }
 body header {
-  width: 1300px;
+  max-width: 1300px;
   height: 100px;
   overflow: visible;
   margin: 0 auto;
@@ -34,14 +35,16 @@ body header h1 {
   text-align: right;
 }
 body nav {
-  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
   height: 50px;
+  padding: 1em;
   position: sticky;
-  top: 45px;
-  left: 100px;
-  overflow: hidden;
-  background-color: #333;
-  display: inline-block;
+  top: 60px;
+  left: 10vw;
 }
 body nav a {
   color: rgb(204, 231, 239);
@@ -51,13 +54,98 @@ body nav a {
 body nav a:hover {
   color: rgb(170, 117, 255);
 }
-body nav .expand {
-  list-style: none;
+body nav .menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body nav .menu li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+body nav .menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body nav #menu-toggle {
   display: none;
 }
-body nav .expand li {
-  display: inline;
-  margin-left: 10px;
+body nav .menu-button,
+body nav .menu-button::before,
+body nav .menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+body nav .menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+body nav .menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+body nav #menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+body nav #menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+body nav #menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+@media (max-width: 700px) {
+  body nav .menu-button-container {
+    display: flex;
+  }
+  body nav .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  body nav #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  body nav #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  body nav .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  body nav .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
 }
 body #projects {
   max-width: 1300px;
@@ -110,10 +198,10 @@ body #projects figure:hover img {
   transition: 1s;
 }
 body #about {
-  max-width: 1000px;
+  max-width: 1300px;
   min-height: 800px;
   margin: 0 auto;
-  padding: 100px 30px;
+  padding: 100px 150px;
 }
 body #about h2 {
   color: white;
@@ -126,7 +214,7 @@ body #about p {
   line-height: 1.5em;
 }
 body #tech {
-  max-width: 1500px;
+  max-width: 1300px;
   height: 1000px;
   margin: 0 auto;
   padding: 100px 50px;

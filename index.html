@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto:wght@100;300&display=swap"
     rel="stylesheet">
-  
+
   <script src="./app.js" defer></script>
 </head>
 
@@ -21,7 +21,7 @@
     <p class="bg-text"><!-- generated from app.js --></p>
     <div class="fg-wrapper">
 
-      <nav class="sticky">
+      <!-- <nav class="sticky">
         <a href="" class="icon">
           <img src="./icons/hb-menu-s.png" alt="">
         </a>
@@ -31,20 +31,25 @@
           <li><a href="#about">About</a></li>
           <li><a href="#tech">Tech Stack</a></li>
         </ul>
+      </nav> -->
+
+      <nav>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+          <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#tech">Tech Stack</a></li>
+        </ul>
       </nav>
-      
+
+
+
       <header>
-        <!-- <nav class="sticky">
-          <a href="" class="icon">
-            <img src="./icons/hb-menu-s.png" alt="">
-          </a>
-          <ul class="expand">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tech">Tech Stack</a></li>
-          </ul>
-        </nav> -->
+        <!-- nav menu here? -->
         <h1>ATWAN SHAABAN .DEV &lt;/&gt;</h1>
       </header>
 
