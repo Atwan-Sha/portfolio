@@ -19,135 +19,108 @@
   transform: translateZ(-20px) scale(2);
 }
 
+.fade {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 body {
   color: rgb(204, 231, 239);
   background-color: rgb(28, 28, 28);
   font-family: "Roboto Mono", monospace;
 }
-body header {
+
+header {
   max-width: 1300px;
   height: 100px;
   overflow: visible;
   margin: 0 auto;
 }
-body header h1 {
+header h1 {
   font-size: 30px;
   text-align: right;
 }
-body nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  color: #FFF;
-  height: 50px;
-  padding: 1em;
+
+nav {
+  margin-left: 10%;
   position: sticky;
-  top: 60px;
-  left: 10vw;
+  top: 120px;
+  left: 100px;
+  z-index: 1;
 }
-body nav a {
-  color: rgb(204, 231, 239);
-  text-decoration: none;
-  font-size: 30px;
-}
-body nav a:hover {
-  color: rgb(170, 117, 255);
-}
-body nav .menu {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-body nav .menu li {
-  margin: 0 1rem;
-  overflow: hidden;
-}
-body nav .menu-button-container {
-  display: none;
-  height: 100%;
-  width: 30px;
+nav .menu-button-container {
+  background-color: blue;
+  display: block;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-body nav #menu-toggle {
-  display: none;
-}
-body nav .menu-button,
-body nav .menu-button::before,
-body nav .menu-button::after {
+nav .menu-button-container .menu-button,
+nav .menu-button-container .menu-button::before,
+nav .menu-button-container .menu-button::after {
   display: block;
   background-color: #fff;
   position: absolute;
+  width: 50px;
   height: 4px;
-  width: 30px;
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
 }
-body nav .menu-button::before {
+nav .menu-button-container .menu-button::before {
   content: "";
-  margin-top: -8px;
+  margin-top: -10px;
 }
-body nav .menu-button::after {
+nav .menu-button-container .menu-button::after {
   content: "";
-  margin-top: 8px;
+  margin-top: 10px;
 }
-body nav #menu-toggle:checked + .menu-button-container .menu-button::before {
+nav #menu-toggle {
+  display: none;
+}
+nav #menu-toggle:checked + .menu-button-container .menu-button::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
-body nav #menu-toggle:checked + .menu-button-container .menu-button {
+nav #menu-toggle:checked + .menu-button-container .menu-button {
   background: rgba(255, 255, 255, 0);
 }
-body nav #menu-toggle:checked + .menu-button-container .menu-button::after {
+nav #menu-toggle:checked + .menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
-@media (max-width: 700px) {
-  body nav .menu-button-container {
-    display: flex;
-  }
-  body nav .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 50px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  body nav #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  body nav #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  body nav .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
-  body nav .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
+nav #menu-toggle:checked ~ .menu {
+  transform: scale(1, 1);
+  opacity: 1;
+  visibility: visible;
 }
-body #projects {
+nav .menu {
+  visibility: hidden;
+  width: 600px;
+  height: 50px;
+  position: relative;
+  top: -70px;
+  left: 40px;
+  transform: scale(0, 1);
+  transform-origin: left;
+  list-style: none;
+  margin-left: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+nav .menu li {
+  display: inline;
+}
+nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+  color: rgb(204, 231, 239);
+  text-decoration: none;
+  font-size: 30px;
+  padding: 0 10px;
+}
+nav .menu li a:hover {
+  color: rgb(170, 117, 255);
+}
+
+#projects {
   max-width: 1300px;
   min-height: 800px;
   display: flex;
@@ -157,76 +130,78 @@ body #projects {
   margin: 0 auto;
   padding: 100px 50px;
 }
-body #projects figure {
+#projects figure {
   width: 280px;
   height: 600px;
   margin: 0;
   padding: 10px;
 }
-body #projects figure h3 {
+#projects figure h3 {
   text-align: center;
   font-size: 20px;
   padding: 10px;
 }
-body #projects figure .img-container {
+#projects figure .img-container {
   overflow: hidden;
   background-color: black;
   width: 250px;
   height: 250px;
   border-radius: 20px;
 }
-body #projects figure img {
+#projects figure img {
   object-fit: cover;
   opacity: 0.8;
   transition: 1s;
 }
-body #projects figure figcaption {
+#projects figure figcaption {
   text-align: center;
   font-size: 20px;
   padding: 10px;
 }
-body #projects figure figcaption a {
+#projects figure figcaption a {
   color: rgb(204, 231, 239);
   font-size: 20px;
 }
-body #projects figure figcaption a:hover {
+#projects figure figcaption a:hover {
   color: white;
 }
-body #projects figure:hover img {
+#projects figure:hover img {
   scale: 1.1;
   opacity: 1;
   transition: 1s;
 }
-body #about {
+
+#about {
   max-width: 1300px;
   min-height: 800px;
   margin: 0 auto;
   padding: 100px 150px;
 }
-body #about h2 {
+#about h2 {
   color: white;
   font-size: 30px;
   margin-bottom: 50px;
 }
-body #about p {
+#about p {
   color: white;
   font-size: 30px;
   line-height: 1.5em;
 }
-body #tech {
+
+#tech {
   max-width: 1300px;
   height: 1000px;
   margin: 0 auto;
   padding: 100px 50px;
   font-size: 25px;
 }
-body #tech h2 {
+#tech h2 {
   width: 750px;
   font-size: 30px;
   padding: 0 25px;
   margin: 70px auto;
 }
-body #tech .flex-container {
+#tech .flex-container {
   margin: 0 auto;
   max-width: 750px;
   max-height: 500px;
@@ -235,24 +210,25 @@ body #tech .flex-container {
   align-items: center;
   flex-wrap: wrap;
 }
-body #tech .flex-container figure {
+#tech .flex-container figure {
   text-align: center;
   width: 150px;
   height: 200px;
 }
-body #tech .flex-container figure a {
+#tech .flex-container figure a {
   text-decoration: none;
   color: rgb(204, 231, 239);
 }
-body #tech .flex-container figure img {
+#tech .flex-container figure img {
   width: 100px;
   height: auto;
 }
-body #tech .flex-container figure:hover img {
+#tech .flex-container figure:hover img {
   background-color: rgb(64, 64, 64);
   transition: 500ms;
 }
-body footer {
+
+footer {
   color: rgb(186, 186, 186);
   text-align: center;
   width: 1000px;
