@@ -13,16 +13,16 @@ bgText.insertAdjacentText('beforeEnd', bgTextStr);
 
 
 // ! add front layer for fade
-let menuClicked = false;
-menuButtonContainer.addEventListener('click', () => {
-    if(!menuClicked){
-        bgWrapper.classList.add('fade');
-        menuClicked = true;
-    }else{
-        bgWrapper.classList.remove('fade');
-        menuClicked = false;
-    }
-});
+// let menuClicked = false;
+// menuButtonContainer.addEventListener('click', () => {
+//     if(!menuClicked){
+//         bgWrapper.classList.add('fade');
+//         menuClicked = true;
+//     }else{
+//         bgWrapper.classList.remove('fade');
+//         menuClicked = false;
+//     }
+// });
 
 
 
