@@ -19,10 +19,6 @@
   transform: translateZ(-20px) scale(2);
 }
 
-.fade {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 body {
   color: rgb(204, 231, 239);
   background-color: rgb(28, 28, 28);
@@ -96,7 +92,7 @@ nav #menu-toggle:checked ~ .menu {
 }
 nav .menu {
   visibility: hidden;
-  width: 600px;
+  width: 1000px;
   height: 50px;
   padding: 5px 0;
   position: relative;
@@ -112,11 +108,10 @@ nav .menu li {
   display: inline;
 }
 nav .menu li a {
-  color: #fff;
-  text-decoration: none;
   color: rgb(204, 231, 239);
   text-decoration: none;
   font-size: 25px;
+  font-weight: 600;
   padding: 0 20px;
 }
 nav .menu li a:hover {
@@ -129,7 +124,7 @@ nav .overlay {
   background: rgba(0, 0, 0, 0.7);
   z-index: -1;
   width: 100%;
-  height: 320%;
+  height: 360%;
   display: none;
 }
 nav #menu-toggle:checked ~ .overlay {
@@ -189,7 +184,7 @@ nav #menu-toggle:checked ~ .overlay {
 
 #about {
   max-width: 1300px;
-  min-height: 800px;
+  min-height: 500px;
   margin: 0 auto;
   padding: 100px 150px;
 }
@@ -206,7 +201,7 @@ nav #menu-toggle:checked ~ .overlay {
 
 #tech {
   max-width: 1300px;
-  height: 1000px;
+  height: 800px;
   margin: 0 auto;
   padding: 100px 50px;
   font-size: 25px;
@@ -242,6 +237,35 @@ nav #menu-toggle:checked ~ .overlay {
 #tech .flex-container figure:hover img {
   background-color: rgb(64, 64, 64);
   transition: 500ms;
+}
+
+#contact {
+  text-align: center;
+  max-width: 1300px;
+  min-height: 800px;
+  margin: 0 auto;
+  padding: 100px 150px;
+}
+#contact h2 {
+  width: 750px;
+  font-size: 30px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+#contact form {
+  display: table;
+  margin: 0 auto;
+  padding: 50px 200px;
+  width: 750px;
+  height: 500px;
+}
+#contact form label, #contact form input {
+  font-size: 25px;
+}
+#contact form textarea {
+  font-size: 25px;
+  width: 300px;
+  height: 100px;
 }
 
 footer {

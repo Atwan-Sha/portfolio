@@ -45,10 +45,6 @@ $fontMono: "Roboto Mono", monospace;
   // }
 }
 
-.fade {
-  background-color: rgba($color: #000000, $alpha: 0.5);
-  // background-color: blue;
-}
 
 // *MAIN
 body {
@@ -139,7 +135,7 @@ nav {
   // *nav bar
   .menu {
     visibility: hidden;
-    width: 600px;
+    width: 1000px;
     height: 50px;
     padding: 5px 0;
     // background-color: rgba($color: #000000, $alpha: 0.5);
@@ -154,11 +150,10 @@ nav {
     li {
       display: inline;
       a {
-        color: #fff;
-        text-decoration: none;
         color: $textColor;
         text-decoration: none;
         font-size: 25px;
+        font-weight: 600;
         padding: 0 20px;
       }
       a:hover {
@@ -174,7 +169,7 @@ nav {
     background: rgba(0, 0, 0, 0.7);
     z-index: -1;
     width: 100%;
-    height: 320%;
+    height: 360%;
     display: none;
   }
   #menu-toggle:checked ~ .overlay {
@@ -252,7 +247,7 @@ nav {
 
   // border: solid 1px rgb(124, 124, 124);
   max-width: $maxWidth;
-  min-height: 800px;
+  min-height: 500px;
   margin: 0 auto;
   padding: 100px 150px;
   h2 {
@@ -270,7 +265,7 @@ nav {
 #tech {
   // border: solid 1px rgb(124, 124, 124);
   max-width: $maxWidth;
-  height: 1000px;
+  height: 800px;
   margin: 0 auto;
   padding: 100px 50px;
   font-size: 25px;
@@ -311,6 +306,46 @@ nav {
       }
     }
   }
+}
+
+#contact {
+  // border: solid 1px rgb(124, 124, 124);
+  text-align: center;
+  max-width: $maxWidth;
+  min-height: 800px;
+  margin: 0 auto;
+  padding: 100px 150px;
+  h2 {
+    width: 750px;
+    font-size: 30px;
+    padding: 0 25px;
+    margin: 0 auto;
+  }
+  form {
+    // border: solid 1px rgb(124, 124, 124);
+    display: table;
+    margin: 0 auto;
+    padding: 50px 200px;
+    width: 750px;
+    height: 500px;
+    label, input {
+      // display: table-row;
+      font-size: 25px;
+      // margin-left: 20px;
+    }
+    textarea {
+      font-size: 25px;
+      width: 300px;
+      height: 100px;
+      // margin-right: 60px;
+    }
+  }
+
+  // p {
+  //   color: white;
+  //   font-size: 30px;
+  //   line-height: 1.5em;
+  // }
 }
 
 footer {

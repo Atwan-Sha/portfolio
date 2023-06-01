@@ -12,7 +12,18 @@ bgTextStr = bgTextStr.repeat(15).split('').join(' ');
 bgText.insertAdjacentText('beforeEnd', bgTextStr);
 
 
-// ! add front layer for fade
+// *check form data
+
+
+
+
+
+
+
+
+
+
+// add front layer for fade
 // let menuClicked = false;
 // menuButtonContainer.addEventListener('click', () => {
 //     if(!menuClicked){
@@ -24,9 +35,7 @@ bgText.insertAdjacentText('beforeEnd', bgTextStr);
 //     }
 // });
 
-
-
-
+// JS for hb menu?
 // // * nav hb menu
 // icon.addEventListener("mouseenter", () => {
 //     menu.style.display = "inline";
