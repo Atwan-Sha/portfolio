@@ -4,8 +4,12 @@ const body = document.querySelector("body");
 const bgWrapper = document.querySelector(".bg-wrapper");
 const fgWrapper = document.querySelector(".fg-wrapper");
 const menuButtonContainer = document.querySelector(".menu-button-container");
+const contactSection = document.querySelector("#contact");
 const contactForm = document.querySelector("#contact-form");
-const submitBtn = document.querySelector("#submit_btn");
+const submitBtn = document.querySelector("#submit-btn");
+const submitSuccessMsg = document.querySelector("#submit-success");
+const submitErrorMsg = document.querySelector("#submit-error");
+const newSubmitBtn = document.querySelector("#new-submit");
 
 handleEmailJSform();
 generateBGtext();
@@ -20,6 +24,9 @@ function generateBGtext() {
 
 // *EmailJS form submission
 // ? add form validation
+// ? add form styling
+// ? isolate this function for testing (to not waste email credits)
+
 function handleEmailJSform() {
   emailjs.init("NdJODzxba1YmKzyl6");
   contactForm.addEventListener("submit", (event) => {
@@ -33,10 +40,13 @@ function handleEmailJSform() {
       (err) => {
         console.log("FAILED...", err);
         submitError();
-        // ! oops! smth went wrong
       }
     );
   });
+}
+
+function captchaVerification() {
+  // ? add embedded captcha
 }
 
 function submitLoad() {
@@ -44,15 +54,33 @@ function submitLoad() {
 }
 
 function submitSuccess() {
-    submitBtn.value = "Success!"
-    submitBtn.style.color = "green";
-
+    contactForm.reset();
+    contactSection.classList.add("hide");
+    submitSuccessMsg.classList.remove("hide");
+    newSubmitBtn.classList.remove("hide");
 }
 
 function submitError() {
-    submitBtn.value = "Error!"
-    submitBtn.style.color = "red";
+    contactForm.reset();
+    contactSection.classList.add("hide");
+    submitErrorMsg.classList.remove("hide");
+    newSubmitBtn.classList.remove("hide");
 }
+
+newSubmitBtn.addEventListener("click", () => {
+  submitBtn.value = "Submit";
+  contactSection.classList.remove("hide");
+  submitSuccessMsg.classList.add("hide");
+  newSubmitBtn.classList.add("hide");
+  
+});
+
+
+
+
+
+
+
 
 // add front layer for fade
 // let menuClicked = false;

@@ -12,6 +12,10 @@ $fontMono: "Roboto Mono", monospace;
   scroll-behavior: smooth;
 }
 
+.hide {
+  display: none;
+}
+
 // * parallax scroll effect
 .bg-wrapper {
   // background-color: #373535;
@@ -321,13 +325,14 @@ nav {
     padding: 0 25px;
     margin: 0 auto;
   }
+  
   form {
     // border: solid 1px rgb(124, 124, 124);
     display: table;
     margin: 0 auto;
-    padding: 50px 200px;
-    width: 750px;
-    height: 500px;
+    padding: 50px 100px;
+    width: 800px;
+    height: 700px;
     label, input {
       // display: table-row;
       font-size: 25px;
@@ -335,10 +340,15 @@ nav {
     }
     textarea {
       font-size: 25px;
-      width: 300px;
-      height: 100px;
+      width: 500px;
+      height: 300px;
       // margin-right: 60px;
     }
+    #submit-btn {
+      width: 300px;
+      height: 50px;
+    }
+
   }
 
   // p {
@@ -348,6 +358,46 @@ nav {
   // }
 }
 
+#submit-success {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(119, 196, 119);
+  max-width: $maxWidth;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 50px 200px;
+  // background-color: grey;
+}
+
+#submit-error {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  max-width: $maxWidth;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 50px 200px;
+  // background-color: grey;
+}
+
+#new-submit {
+  display: block;
+  width: 300px;
+  height: 50px;
+  margin: 50px auto;
+  margin-bottom: 500px;
+  font-size: 25px;
+}
+
+#new-submit.hide {
+  display: none;
+}
+
+
 footer {
   color: rgb(186, 186, 186);
   text-align: center;
@@ -355,3 +405,4 @@ footer {
   height: 100px;
   margin: 0 auto;
 }
+

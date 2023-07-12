@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+.hide {
+  display: none;
+}
+
 .bg-wrapper {
   height: 100vh;
   overflow-y: auto;
@@ -255,17 +259,58 @@ nav #menu-toggle:checked ~ .overlay {
 #contact form {
   display: table;
   margin: 0 auto;
-  padding: 50px 200px;
-  width: 750px;
-  height: 500px;
+  padding: 50px 100px;
+  width: 800px;
+  height: 700px;
 }
 #contact form label, #contact form input {
   font-size: 25px;
 }
 #contact form textarea {
   font-size: 25px;
+  width: 500px;
+  height: 300px;
+}
+#contact form #submit-btn {
   width: 300px;
-  height: 100px;
+  height: 50px;
+}
+
+#submit-success {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(119, 196, 119);
+  max-width: 1300px;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 50px 200px;
+}
+
+#submit-error {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  max-width: 1300px;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 50px 200px;
+}
+
+#new-submit {
+  display: block;
+  width: 300px;
+  height: 50px;
+  margin: 50px auto;
+  margin-bottom: 500px;
+  font-size: 25px;
+}
+
+#new-submit.hide {
+  display: none;
 }
 
 footer {

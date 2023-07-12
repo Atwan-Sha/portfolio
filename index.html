@@ -169,23 +169,37 @@
           </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="">
 
           <h2>Got Questions? Get In Touch!</h2>
           <form id="contact-form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name" required><br><br>
+            <input type="text" id="name" name="user_name" required maxlength="50"><br><br>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="user_email" required><br><br>
+            <input type="email" id="email" name="user_email" required maxlength="50"><br><br>
 
             <label for="message">Message:</label>
-            <textarea id="message" name="user_message" required></textarea><br><br>
+            <textarea id="message" name="user_message" required maxlength="200"></textarea><br><br>
 
-            <input type="submit" id="submit_btn" value="Submit">
+            <!-- <label for="submit-btn" id="submit-status" class="show">SUBMIT STATUS</label> -->
+            <input type="submit" id="submit-btn" value="Submit">
+
+            
           </form>
 
         </section>
+
+        <div id="submit-success" class="hide">
+          <p>Thank You! I will get back to you shortly!</p>
+        </div>
+
+        <div id="submit-error" class="hide">
+          <p>Oooops... Something went wrong. Please try again later!</p>
+        </div>
+
+        <button id="new-submit" class="hide">New Submission</button>
+        <!-- error: display:none doesn't apply to class hide -->
 
 
 
