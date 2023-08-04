@@ -1,9 +1,12 @@
-const bgText = document.querySelector(".bg-text");
-const nav = document.querySelector("nav");
 const body = document.querySelector("body");
+const bgText = document.querySelector(".bg-text");
 const bgWrapper = document.querySelector(".bg-wrapper");
 const fgWrapper = document.querySelector(".fg-wrapper");
-const menuButtonContainer = document.querySelector(".menu-button-container");
+
+const nav = document.querySelector("nav");
+const menuToggle = document.querySelector("#menu-toggle");
+const navLinks = document.querySelectorAll(".nav-link");
+
 const contactSection = document.querySelector("#contact");
 const contactForm = document.querySelector("#contact-form");
 const submitBtn = document.querySelector("#submit-btn");
@@ -11,8 +14,9 @@ const submitSuccessMsg = document.querySelector("#submit-success");
 const submitErrorMsg = document.querySelector("#submit-error");
 const newSubmitBtn = document.querySelector("#new-submit");
 
-handleEmailJSform();
 generateBGtext();
+navLinkMenuClose();
+handleEmailJSform();
 
 // *bg ascii secret message
 function generateBGtext() {
@@ -21,6 +25,17 @@ function generateBGtext() {
   bgTextStr = bgTextStr.repeat(15).split("").join(" ");
   bgText.insertAdjacentText("beforeEnd", bgTextStr);
 }
+
+function navLinkMenuClose() {
+  for(a of navLinks) {
+    a.addEventListener("click", () => {
+      menuToggle.checked = false;
+    });
+  }
+}
+
+
+
 
 // *EmailJS form submission
 // ? add form validation

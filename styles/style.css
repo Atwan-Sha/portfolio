@@ -41,9 +41,11 @@ header h1 {
 }
 
 nav {
+  width: 50px;
+  height: 50px;
   margin-left: 10%;
   position: sticky;
-  top: 100px;
+  top: 50px;
   left: 100px;
   z-index: 1;
 }
@@ -92,10 +94,8 @@ nav #menu-toggle:checked + .menu-button-container .menu-button::after {
 nav #menu-toggle:checked ~ .menu {
   transform: scale(1, 1);
   opacity: 1;
-  visibility: visible;
 }
 nav .menu {
-  visibility: hidden;
   width: 1000px;
   height: 50px;
   padding: 5px 0;

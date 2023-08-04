@@ -73,11 +73,11 @@ header {
 }
 
 nav {
-  // width: 70%;
-  // height: 50px;
+  width: 50px;
+  height: 50px;
   margin-left: 10%;
   position: sticky;
-  top: 100px;
+  top: 50px;
   left: 100px;
   z-index: 1;
 
@@ -131,22 +131,19 @@ nav {
     transform: rotate(-405deg);
   }
   #menu-toggle:checked ~ .menu {
-    transform: scale(1, 1);
+    transform: scale(1, 1); // * <- this shows the menu
     opacity: 1;
-    visibility: visible;
   }
 
   // *nav bar
   .menu {
-    visibility: hidden;
     width: 1000px;
     height: 50px;
     padding: 5px 0;
-    // background-color: rgba($color: #000000, $alpha: 0.5);
     position: relative;
     top: -50px;
     left: 40px;
-    transform: scale(0, 1);
+    transform: scale(0, 1);  // * <- this hides the menu
     transform-origin: left;
     list-style: none;
     margin-left: 50px;
