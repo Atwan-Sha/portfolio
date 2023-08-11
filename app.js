@@ -14,9 +14,6 @@ const submitSuccessMsg = document.querySelector("#submit-success");
 const submitErrorMsg = document.querySelector("#submit-error");
 const newSubmitBtn = document.querySelector("#new-submit");
 
-generateBGtext();
-navLinkMenuClose();
-handleEmailJSform();
 
 // *bg ascii secret message
 function generateBGtext() {
@@ -35,8 +32,6 @@ function navLinkMenuClose() {
 }
 
 
-
-
 // *EmailJS form submission
 // ? add form validation
 // ? add form styling
@@ -47,21 +42,18 @@ function handleEmailJSform() {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     submitLoad();
-    emailjs.sendForm("default_service", "template_default", contactForm).then(
-      (msg) => {
-        console.log("SUCCESS!", msg);
-        submitSuccess();
-      },
-      (err) => {
-        console.log("FAILED...", err);
-        submitError();
-      }
-    );
+    emailjs.sendForm("default_service", "template_default", contactForm)
+      .then(
+        (msg) => {
+          console.log("SUCCESS!", msg);
+          submitSuccess();
+        },
+        (err) => {
+          console.log("FAILED...", err);
+          submitError();
+        }
+      );
   });
-}
-
-function captchaVerification() {
-  // ? add embedded captcha
 }
 
 function submitLoad() {
@@ -86,14 +78,16 @@ newSubmitBtn.addEventListener("click", () => {
   submitBtn.value = "Submit";
   contactSection.classList.remove("hide");
   submitSuccessMsg.classList.add("hide");
+  submitErrorMsg.classList.add("hide");
   newSubmitBtn.classList.add("hide");
-  
 });
 
 
 
 
-
+generateBGtext();
+navLinkMenuClose();
+handleEmailJSform();
 
 
 
