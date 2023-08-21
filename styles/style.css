@@ -1,3 +1,7 @@
+:root {
+  font-size: 62.5%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -244,36 +248,83 @@ nav #menu-toggle:checked ~ .overlay {
 }
 
 #contact {
-  text-align: center;
   max-width: 1300px;
   min-height: 800px;
   margin: 0 auto;
   padding: 100px 150px;
 }
 #contact h2 {
+  text-align: center;
   width: 750px;
   font-size: 30px;
   padding: 0 25px;
   margin: 0 auto;
 }
 #contact form {
-  display: table;
+  width: 600px;
+  height: 800px;
   margin: 0 auto;
-  padding: 50px 100px;
-  width: 800px;
-  height: 700px;
+  padding: 50px 50px;
 }
-#contact form label, #contact form input {
-  font-size: 25px;
+#contact form .form-input {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  margin: 20px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0.1;
+}
+#contact form .form-input:focus {
+  opacity: 1;
+  transition: 1s;
+  color: black;
+}
+#contact form .form-input:not(:placeholder-shown) {
+  opacity: 1;
+  color: black;
+}
+#contact form .form-input::placeholder {
+  display: none;
+  color: transparent;
+}
+#contact form input:focus + label, #contact form input:not(:placeholder-shown) + label {
+  transform: translateY(-10rem) scale(1);
+  transition: 500ms;
 }
 #contact form textarea {
-  font-size: 25px;
-  width: 500px;
   height: 300px;
 }
+#contact form textarea:focus + label, #contact form textarea:not(:placeholder-shown) + label {
+  transform: translateY(-35rem) scale(1);
+  transition: 500ms;
+}
+#contact form label {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bolder;
+  transform: translate(1.25rem, -6rem);
+  transform-origin: 0 0;
+  transition: all 500ms;
+  pointer-events: none;
+}
+#contact form textarea + label {
+  transform: translate(1.25rem, -31rem);
+}
 #contact form #submit-btn {
-  width: 300px;
+  width: 50%;
   height: 50px;
+  margin: 20px auto;
+  background-color: rgb(28, 28, 28);
+  color: rgb(204, 231, 239);
+  border: 2px solid rgb(204, 231, 239);
+}
+#contact form #submit-btn:hover {
+  background-color: rgb(39, 39, 39);
+  color: white;
+  border-color: white;
+  transition: 500ms;
 }
 
 #submit-success {
@@ -302,13 +353,23 @@ nav #menu-toggle:checked ~ .overlay {
 
 #new-submit {
   display: block;
-  width: 300px;
+  width: 250px;
   height: 50px;
-  margin: 50px auto;
-  margin-bottom: 500px;
-  font-size: 25px;
+  font-size: 2rem;
+  margin: 20px auto;
+  margin-bottom: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(28, 28, 28);
+  color: rgb(204, 231, 239);
+  border: 2px solid rgb(204, 231, 239);
 }
-
+#new-submit:hover {
+  background-color: rgb(39, 39, 39);
+  color: white;
+  border-color: white;
+  transition: 500ms;
+}
 #new-submit.hide {
   display: none;
 }

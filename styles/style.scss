@@ -5,6 +5,10 @@ $maxWidth: 1300px;
 $fontMain: "Roboto", Calibri, sans-serif;
 $fontMono: "Roboto Mono", monospace;
 
+:root {
+  font-size: 62.5%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -48,7 +52,6 @@ $fontMono: "Roboto Mono", monospace;
 
   // }
 }
-
 
 // *MAIN
 body {
@@ -143,7 +146,7 @@ nav {
     position: relative;
     top: -50px;
     left: 40px;
-    transform: scale(0, 1);  // * <- this hides the menu
+    transform: scale(0, 1); // * <- this hides the menu
     transform-origin: left;
     list-style: none;
     margin-left: 50px;
@@ -245,7 +248,6 @@ nav {
 
 #about {
   // grid-column: 2/2;
-
   // border: solid 1px rgb(124, 124, 124);
   max-width: $maxWidth;
   min-height: 500px;
@@ -311,48 +313,94 @@ nav {
 
 #contact {
   // border: solid 1px rgb(124, 124, 124);
-  text-align: center;
   max-width: $maxWidth;
   min-height: 800px;
   margin: 0 auto;
   padding: 100px 150px;
   h2 {
+    text-align: center;
     width: 750px;
     font-size: 30px;
     padding: 0 25px;
     margin: 0 auto;
   }
-  
+
   form {
     // border: solid 1px rgb(124, 124, 124);
-    display: table;
+    width: 600px;
+    height: 800px;
     margin: 0 auto;
-    padding: 50px 100px;
-    width: 800px;
-    height: 700px;
-    label, input {
-      // display: table-row;
-      font-size: 25px;
-      // margin-left: 20px;
+    padding: 50px 50px;
+
+    .form-input {
+      display: block;
+      width: 100%;
+      font-size: 2rem;
+      margin: 20px 0px;
+      padding: 10px;
+      border-radius: 10px;
+      opacity: 0.1;
+      &:focus {
+        opacity: 1;
+        transition: 1s;
+        color: black;
+      }
+      &:not(:placeholder-shown) {
+        opacity: 1;
+        color: black;
+      }
+      &::placeholder {
+        display: none;
+        color: transparent;
+      }
+    }
+    input {
+      &:focus + label,
+      &:not(:placeholder-shown) + label {
+        transform: translateY(-10rem) scale(1);
+        transition: 500ms;
+      }
     }
     textarea {
-      font-size: 25px;
-      width: 500px;
       height: 300px;
-      // margin-right: 60px;
+      &:focus + label,
+      &:not(:placeholder-shown) + label {
+        transform: translateY(-35rem) scale(1);
+        transition: 500ms;
+      }
     }
+
+    label {
+      display: block;
+      width: 100%;
+      font-size: 2rem;
+      font-weight: bolder;
+      transform: translate(1.25rem, -6rem);
+      transform-origin: 0 0;
+      transition: all 500ms;
+      pointer-events: none;
+    }
+    textarea + label {
+      transform: translate(1.25rem, -31rem);
+    }
+
     #submit-btn {
-      width: 300px;
+      width: 50%;
       height: 50px;
+      margin: 20px auto;
+      background-color: $bgColor;
+      color: $textColor;
+      border: 2px solid $textColor;
+      &:hover {
+        background-color: rgb(39, 39, 39);
+        color: white;
+        border-color: white;
+        transition: 500ms;
+      }
     }
 
+    
   }
-
-  // p {
-  //   color: white;
-  //   font-size: 30px;
-  //   line-height: 1.5em;
-  // }
 }
 
 #submit-success {
@@ -383,17 +431,26 @@ nav {
 
 #new-submit {
   display: block;
-  width: 300px;
+  width: 250px;
   height: 50px;
-  margin: 50px auto;
-  margin-bottom: 500px;
-  font-size: 25px;
+  font-size: 2rem;
+  margin: 20px auto;
+  margin-bottom: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $bgColor;
+  color: $textColor;
+  border: 2px solid $textColor;
+  &:hover {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    border-color: white;
+    transition: 500ms;
+  }
+  &.hide {
+    display: none;
+  }
 }
-
-#new-submit.hide {
-  display: none;
-}
-
 
 footer {
   color: rgb(186, 186, 186);
@@ -402,4 +459,3 @@ footer {
   height: 100px;
   margin: 0 auto;
 }
-

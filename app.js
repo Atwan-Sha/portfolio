@@ -9,10 +9,10 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 const contactSection = document.querySelector("#contact");
 const contactForm = document.querySelector("#contact-form");
-const submitBtn = document.querySelector("#submit-btn");
+const submitBtn = document.querySelector("#submit-btn"); // ?use this button only and move up?
 const submitSuccessMsg = document.querySelector("#submit-success");
 const submitErrorMsg = document.querySelector("#submit-error");
-const newSubmitBtn = document.querySelector("#new-submit");
+const newSubmitBtn = document.querySelector("#new-submit"); // ?remove this?
 
 
 // *bg ascii secret message
@@ -30,7 +30,6 @@ function navLinkMenuClose() {
     });
   }
 }
-
 
 // *EmailJS form submission
 // ? add form validation
